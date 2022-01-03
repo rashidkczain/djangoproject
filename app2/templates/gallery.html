@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="margin-top: 100px; margin-left: 150px;">
+    {% for d in data %}
+ <a href="{% url 'app2:detailes' d.id %}"   ><img src="{{ d.Photo.url }}" height="200" width="250"></a>
+    {{ d.Name }}
+    {% endfor %}
+    </div>
+{% endblock %}

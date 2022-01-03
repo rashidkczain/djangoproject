@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+    <img src="{{ data.Photo.url }}" height="200" width="250">
+    {{ data.Name }}
+    {{ data.Model }}
+    {{ data.Price }}
+{% endblock %}
